@@ -4,18 +4,50 @@
 
 SearchableArray::SearchableArray()
 {
+	tail = 0;	
 	for (int i = 0; i < ARRAYSIZE; i++)
 	{
 		array[i] = 0;
 	}
 }
 
+void SearchableArray::PushNumber(int number)
+{
+	if (tail < ARRAYSIZE)
+	{
+		array[tail] = number;
+	}
+	tail++;
+}
+
+void SearchableArray::RemoveAt(int index)
+{
+	tail--;
+	for (int i = index; i < tail; i++)
+	{
+		array[i] = array[i++];
+	}
+	array[tail] = 0;
+}
+
 void SearchableArray::FillTheArray()
+{
+	
+	for (int i = 0; i < ARRAYSIZE; i++)
+	{
+		PushNumber(rand());		
+	}
+}
+
+void SearchableArray::ClearArray()
 {
 	for (int i = 0; i < ARRAYSIZE; i++)
 	{
-		array[i] = rand();
+		RemoveAt(0);
+		if (tail == 0)
+			break;
 	}
+
 }
 
 int SearchableArray::SearchAt(int number)

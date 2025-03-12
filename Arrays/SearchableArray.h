@@ -6,16 +6,23 @@ using namespace std;
 
 class SearchableArray
 {
-	
+protected:
+	int array[ARRAYSIZE];
+	int tail;
 public:
-	int array[];
 
 	SearchableArray();
 
-	void FillTheArray();
+	void virtual PushNumber(int number);
 
-	void ShowTheArray();
+	void virtual RemoveAt(int index);
 
-	int SearchAt(int number);
+	void virtual ClearArray();		
+
+	void virtual FillTheArray();
+
+	void virtual ShowTheArray();
+
+	int virtual SearchAt(int number);
 };
 

@@ -21,9 +21,15 @@
     <ClCompile Include="SearchableArray.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="OrderedArray.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SearchableArray.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OrderedArray.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

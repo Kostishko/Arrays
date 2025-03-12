@@ -128,9 +128,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Arrays.cpp" />
+    <ClCompile Include="OrderedArray.cpp" />
     <ClCompile Include="SearchableArray.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="OrderedArray.h" />
     <ClInclude Include="SearchableArray.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
