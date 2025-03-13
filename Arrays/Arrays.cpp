@@ -3,6 +3,7 @@
 #include <cstdlib>
 #include <iostream>
 #include "SearchableArray.h"
+#include "OrderedArray.h"
 using namespace std;
 
 
@@ -11,7 +12,8 @@ using namespace std;
 int main()
 {
     srand(time(0));
-    SearchableArray CurrentArray;
+    //SearchableArray CurrentArray;
+    OrderedArray CurrentArray;
     CurrentArray.FillTheArray();
 
     char option = 'd';
@@ -23,7 +25,7 @@ int main()
         cout << "         \"a\" Add a number \n";
         cout << "         \"r\" Remove at index\n";
         cout << "         \"f\" Fill the array with random numbers\n";
-        cout << "         \"d\" delete all numbers\n";
+        cout << "         \"d\" Delete all numbers\n";
         cout << "         \"c\" Check the array \n";
         cout << "         \"x\" Exit the program. \n";
 
@@ -64,17 +66,17 @@ int main()
                 break;
             case 'f':                
                 CurrentArray.FillTheArray();
+                cout << "Array filled with random numbers.\n";
                 break;
             case 'd':
                 CurrentArray.ClearArray();
+                cout << "Array is empty. \n";
                 break;
             case 'c':
                 CurrentArray.ShowTheArray();
                 break;
             case 'x':
-                cout << "See you, Space Cowboy.\n";
-                cout << "Press any button.";
-                cin >> foundIndex;                
+                cout << "See you, Space Cowboy.\n";                                
                 break;
             default:
                 cout << "Please, give an available command.\n";

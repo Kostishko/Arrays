@@ -3,7 +3,7 @@
 class OrderedArray :
     public SearchableArray
 {
-
+public:
     OrderedArray();
     
     void PushNumber(int number) override;
@@ -11,8 +11,6 @@ class OrderedArray :
     void RemoveAt(int index) override;
 
     void FillTheArray() override;
-
-    void ShowTheArray() override;
 
     int SearchAt(int number) override;
 

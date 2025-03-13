@@ -22,12 +22,15 @@ void SearchableArray::PushNumber(int number)
 
 void SearchableArray::RemoveAt(int index)
 {
-	tail--;
-	for (int i = index; i < tail; i++)
+	if (tail != 0)
 	{
-		array[i] = array[i++];
+		tail--;
+		for (int i = index; i < tail; i++)
+		{
+			array[i] = array[i+1];
+		}
+		array[tail] = 0;
 	}
-	array[tail] = 0;
 }
 
 void SearchableArray::FillTheArray()
@@ -66,7 +69,7 @@ int SearchableArray::SearchAt(int number)
 void SearchableArray::ShowTheArray()
 {
 	cout << "Here is the array: \n";
-	for (int i = 0; i < ARRAYSIZE; i++)
+	for (int i = 0; i < tail; i++)
 	{
 		cout << "      Num ";
 		cout << i;
